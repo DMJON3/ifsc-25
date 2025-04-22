@@ -21,7 +21,7 @@ html {
 main{ 
   width:960px;
   border:1px solid #000;
-  margin:20px auto; 
+  margin:20px auto;
 }
 
 header.primary{
@@ -42,6 +42,6 @@ header.primary{
 aside{
   background: rgba(0,0,0,0.3);
   margin-left: 2.04133;
-  width: 27.29;
-  float:left;
+  width: 27.29
 }
+
