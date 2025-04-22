@@ -1,0 +1,160 @@
+main{ 
+    width:960px;
+    border:1px solid #000;
+    margin:20px auto;
+  }
+
+body{
+    font-family: "Times New Roman", sans-serif;
+     color: #bd0000;
+
+    text-align: left;
+	background-color: #9ebdb4;
+	font-size: 16px;
+	line-height: 1.5em; 
+    header.primary h1{
+        font-size: 2.4rem;
+        margin:20px 0 0;
+      }
+      
+      header.primary h1 a{
+       color:white;
+       text-decoration:none;
+      }
+      
+      header.primary h2{
+        margin:1px;
+        font-size: 1.4rem;
+      }
+      
+      header.primary nav{
+      max-width:2500px;
+      margin-left:20px;
+      }
+      
+      header.primary ul{
+        padding:0;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+      }
+      
+      header.primary ui li{
+       list-style-type:none;
+      }
+      
+      header.primary nav a{
+        color:#fff;
+        text-decoration:none;
+        background-color:rgba(0,0,0,.3);
+        padding:5px 10px;
+        border-radius: 5px;
+        border: 1px solid #c0c0c0;
+        transition:.4s;
+      }
+      
+      header.primary nav a:hover{
+        background-color:rgba(0,0,0,.5);
+      }
+      
+    
+    
+      
+      #blog{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+        gap:2rem;
+        border-bottom:1px dotted gold;
+        padding-bottom: 3rem;
+        border-top:1px dotted gold;
+        padding-top: 3rem;
+        flex-wrap:wrap;
+      }
+      
+      #blog h2{
+        flex: 0 0 100%;
+        margin:0;
+        text-align:center;
+      }
+      
+      #blog .post{
+        box-shadow: 0 2px 6px rgba(0,0,0,.6);
+        border-radius:4px;
+        font-size:.8rem;
+        flex:1;
+      }
+      
+      #blog figure{
+        margin:0;
+      }
+      
+      #blog figcaption{
+        text-transform:uppercase;
+        font-size: .6rem;
+        text-align:center;
+        color: Gold;
+      }
+      
+      #blog header{
+        background: grey;
+        padding-top:.4rem;
+      }
+      
+      #blog header h2{
+        margin:0;
+        background:#f8b996;
+      
+      }
+      
+      #blog .post:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.7);
+      }
+      
+      aside[role="complementary"]{
+        background-color: #f8b996;
+        color:black;
+        padding:1rem;
+      }
+      
+      aside .container{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        gap:35px
+      }
+      
+      aside .container a{
+        display:block;
+        color:black;
+        text-align:right;
+        margin-top:1rem;
+      }
+      
+      aside .widget footer{
+        
+        display:none;
+      }
+      
+      @media screen and (max-width:600px){
+       header.primary ul{
+        padding:0;
+        flex-direction:column;
+        gap:20px;
+        max-width:250px;
+         margin:auto;
+        }  
+        header.primary nav a{
+          display:block;
+        }
+      }
+
+}
+
+    header.primary{
+        background: rgba(0,0,0,0.4);
+        width:900px;
+        margin:20px;
+        padding:20px;
+        float: left;
+      }
