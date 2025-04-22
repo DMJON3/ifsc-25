@@ -1,0 +1,47 @@
+html {
+  
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.cf:before,
+.cf:after {
+  
+  content: "";
+  display:table;
+}
+
+.cf:after {
+  clear:both;
+}
+
+main{ 
+  width:960px;
+  border:1px solid #000;
+  margin:20px auto; 
+}
+
+header.primary{
+  background: rgba(0,0,0,0.4);
+  width:900px;
+  margin:20px;
+  padding:20px;
+  float: left;
+}
+
+#blog{
+  background: rgba(0,0,0,0.3);
+  width:600px;
+  margin-left:10px;
+  float:left;
+}
+
+aside{
+  background: rgba(0,0,0,0.3);
+  margin-left: 2.04133;
+  width: 27.29;
+  float:left;
+}
