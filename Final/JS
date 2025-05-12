@@ -1,0 +1,36 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const cartItems = [];
+    const cartList = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    function updateCart() {
+        cartList.innerHTML = "";
+        let total = 0;
+
+        cartItems.forEach((item, index) => {
+        const li = document.createElement("li");
+            li.textContent = `${item.name} (${item.weight}) - $${item.price.toFixed(2)}`;
+    const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove";
+        removeBtn.onclick = () => {
+                cartItems.splice(index, 1);
+                updateCart();
+            };
+            li.appendChild(removeBtn);
+            cartList.appendChild(li);
+            total += item.price;
+        });
+
+        cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", () => {
+        const name = button.dataset.product;
+        const weight = button.dataset.weight;
+        const price = parseFloat(button.dataset.price);
+        cartItems.push({name,weight,price});
+            updateCart();
+        });
+    });
+});

@@ -1,82 +1,431 @@
 html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+  color: #bd0000;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
 
-.cf:before,
-.cf:after {
-  
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
   content: "";
-  display:table;
+  display: table;
 }
 
-.cf:after {
-  clear:both;
+.clearfix::after {
+  clear: both;
 }
 
-.container{
-  max-width:960px; 
-  width:80vw;
-  margin:40px auto;
-   
- }
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-main{ 
-  width:960px;
-  border:1px solid #000;
-  margin:20px auto;
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
 
-header.primary{
-  background: rgba(0,0,0,0.4);
-  width:900px;
-  margin:20px;
-  padding:20px;
-  float: left;
-}
-header.primary h1{
-  font-size: 2.4rem;
-  margin:20px 0 0;
+/* Custom CSS Grid Layout */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fefefe;
 }
 
-header.primary h1 a{
- color:white;
- text-decoration:none;
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 70px 1fr 50px;
+  height: 100vh;
 }
 
-header.primary h2{
-  margin:1px;
-  font-size: 1.4rem;
+header {
+  grid-area: header;
+  background: #400101;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
-header.primary nav{
-max-width:2500px;
-margin-left:20px;
+aside {
+  grid-area: sidebar;
+  background: #f3f3f3;
+  padding: 20px;
 }
 
-header.primary ul{
-  padding:0;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
+main {
+  grid-area: main;
+  padding: 20px;
+  background: #fff;
 }
 
-#blog{
-  background: rgba(0,0,0,0.3);
-  width:600px;
-  margin-left:10px;
-  float:left;
+footer {
+  grid-area: footer;
+  background: #400101;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+<header><h1>Site Title</h1></header>
+<aside>
+  <nav>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+</aside>
+<main>
+  <h2>Welcome</h2>
+  <p>This is a custom layout page using your CSS boilerplate with CSS Grid.</p>
+  <hr>
+  <p>Feel free to adapt it to your needs!</p>
+</main>
+<footer>
+  &copy; 2025 Custom Grid Page
+</footer>
+</div>
+</body>
+</html>
+This integrates your base styles while applying a modern CSS Grid layout. Would you like this layout to also be mobile-responsive?
+
+
+
+
+
+
+
+You said:
+Just the CSS
+
+
+ChatGPT said:
+Certainly! Here's just the CSS, combining your boilerplate with the custom CSS Grid layout:
+
+css
+Copy
+Edit
+html {
+color: #bd0000;
+font-size: 1em;
+line-height: 1.4;
 }
 
-aside{
-  background: rgba(0,0,0,0.3);
-  margin-left: 2.04133;
-  width: 27.29
+::-moz-selection {
+background: #b3d4fc;
+text-shadow: none;
 }
 
+::selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+
+hr {
+display: block;
+height: 1px;
+border: 0;
+border-top: 1px solid #ccc;
+margin: 1em 0;
+padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+vertical-align: middle;
+}
+
+fieldset {
+border: 0;
+margin: 0;
+padding: 0;
+}
+
+textarea {
+resize: vertical;
+}
+
+.hidden,
+[hidden] {
+display: none !important;
+}
+
+.visually-hidden {
+border: 0;
+clip: rect(0, 0, 0, 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+white-space: nowrap;
+width: 1px;
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+clip: auto;
+height: auto;
+margin: 0;
+overflow: visible;
+position: static;
+white-space: inherit;
+width: auto;
+}
+
+.invisible {
+visibility: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+content: "";
+display: table;
+}
+
+.clearfix::after {
+clear: both;
+}
+
+@media only screen and (min-width: 35em) {
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+}
+
+@media print {
+*,
+*::before,
+*::after {
+background: #fff !important;
+color: #000 !important;
+box-shadow: none !important;
+text-shadow: none !important;
+}
+
+a,
+a:visited {
+text-decoration: underline;
+}
+
+a[href]::after {
+content: " (" attr(href) ")";
+}
+
+abbr[title]::after {
+content: " (" attr(title) ")";
+}
+
+a[href^="#"]::after,
+a[href^="javascript:"]::after {
+content: "";
+}
+
+pre {
+white-space: pre-wrap !important;
+}
+
+pre,
+blockquote {
+border: 1px solid #999;
+page-break-inside: avoid;
+}
+
+tr,
+img {
+page-break-inside: avoid;
+}
+
+p,
+h2,
+h3 {
+orphans: 3;
+widows: 3;
+}
+
+h2,
+h3 {
+page-break-after: avoid;
+}
+}
+
+/* Custom Grid Layout */
+body {
+margin: 0;
+font-family: sans-serif;
+background: #fefefe;
+}
+
+.grid-container {
+display: grid;
+grid-template-areas:
+"header header"
+"sidebar main"
+"footer footer";
+grid-template-columns: 200px 1fr;
+grid-template-rows: 70px 1fr 50px;
+height: 100vh;
+}
+
+header {
+grid-area: header;
+background: #400101;
+color: #fff;
+display: flex;
+align-items: center;
+padding: 0 20px;
+}
+
+aside {
+grid-area: sidebar;
+background: #f3f3f3;
+padding: 20px;
+}
+
+main {
+grid-area: main;
+padding: 20px;
+background: #fff;
+}
+
+footer {
+grid-area: footer;
+background: #400101;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+}
