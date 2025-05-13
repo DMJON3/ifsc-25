@@ -63,6 +63,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -171,3 +172,76 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+.animated-link {
+    position: relative;
+    font-weight: bold;
+    color: #fff !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animated-link:hover {
+    transform: translateY(-3px);
+    color: #ffeb3b !important;
+}
+
+.animated-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: #ffeb3b;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+.animated-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.carousel-item img {
+  border-radius: 12px;
+  object-fit: cover;
+  height: 400px; 
+  width: 100%;
+}
+
+#products {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.animated-link {
+    position: relative;
+    font-weight: bold;
+    color: #fff !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animated-link:hover {
+    transform: translateY(-3px);
+    color: #ffeb3b !important;
+}
+
+.animated-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: #ffeb3b;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+.animated-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
